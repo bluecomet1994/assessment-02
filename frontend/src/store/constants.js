@@ -1,0 +1,6 @@
+export const ITEMS_REQUEST = '[ITEMS] REQUEST';
+
+export const GET_ITEMS_SUCCSSS = '[ITEMS] GET SUCCSSS';
+export const GET_ITEMS_FAILURE = '[ITEMS] GET FAILURE';
+
+export const SELECT_ITEM = '[ITEMS] SELECT';
