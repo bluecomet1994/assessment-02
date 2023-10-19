@@ -22,9 +22,8 @@ class ItemController {
         });
     }
     static async updateItem(req, res) {
-        const id = req.params.id;
         const { name, description, quantity, purchased } = req.body;
-        await ItemModel_1.default.findOne({ id })
+        await ItemModel_1.default.findOne({ _id: req.query.id })
             .then(item => {
             if (item) {
                 item.name = name;
@@ -43,8 +42,7 @@ class ItemController {
         });
     }
     static async purchaseItem(req, res) {
-        const id = req.params.id;
-        await ItemModel_1.default.findOne({ id })
+        await ItemModel_1.default.findOne({ _id: req.query.id })
             .then(item => {
             if (item) {
                 item.purchased = item.purchased ? false : true;

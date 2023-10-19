@@ -62,7 +62,7 @@ function ItemList() {
             }
           </div>
         ) : (
-          <Empty openModal={() => { setAddModalOpen(true); console.log("here") }} />
+          <Empty openModal={() => setAddModalOpen(true)} />
         )
       }
       <AddItemModal open={addModalOpen} handler={setAddModalOpen} />
