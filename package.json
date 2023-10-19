@@ -1,0 +1,21 @@
+{
+  "name": "assessment",
+  "version": "1.0.0",
+  "description": "Simple Shopping website",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd backend && npm install && cd ../frontend && npm install",
+    "server:start": "cd backend && npm start",
+    "client:start": "cd frontend && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluecomet1994/assessment-02.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bluecomet1994/assessment-02/issues"
+  },
+  "homepage": "https://github.com/bluecomet1994/assessment-02#readme"
+}
