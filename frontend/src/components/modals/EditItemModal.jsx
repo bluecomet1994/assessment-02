@@ -15,6 +15,9 @@ const EditItemModal = (props) => {
   const [quantity, setQuantity] = useState(1);
   const [purchased, setPurchased] = useState(false);
 
+
+  // update item
+
   const updateItem = () => {
     const requestData = {
       name,
@@ -42,6 +45,8 @@ const EditItemModal = (props) => {
   }
 
   useEffect(() => {
+    // set states only when currentItem is not null
+
     if (currentItem) {
       setName(currentItem.name);
       setDescription(currentItem.description);

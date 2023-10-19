@@ -14,6 +14,9 @@ const AddItemModal = (props) => {
   const [description, setDescription] = useState('');
   const [quantity, setQuantity] = useState(1);
 
+
+  // add item
+
   const handleAddItem = () => {
     const requestData = {
       name,

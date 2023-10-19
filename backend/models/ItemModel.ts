@@ -1,5 +1,7 @@
 import * as mongoose from 'mongoose';
 
+// Database Schema
+
 const ItemSchema = new mongoose.Schema({
     name: {
         type: String,

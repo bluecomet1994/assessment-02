@@ -12,6 +12,8 @@ export default class ItemController {
       });
   }
 
+  // Create Item
+
   static async createItem(req: Request, res: Response) {
     const newItem: any = new ItemModel(req.body);
 
@@ -23,6 +25,8 @@ export default class ItemController {
         res.status(500).json(error);
       });
   }
+
+  // Update Item
 
   static async updateItem(req: Request, res: Response) {
     const { name, description, quantity, purchased } = req.body;
@@ -46,6 +50,8 @@ export default class ItemController {
       });
   }
 
+  // Purchase Item or not
+
   static async purchaseItem(req: Request, res: Response) {
     await ItemModel.findOne({ _id: req.query.id })
       .then(item => {
@@ -62,6 +68,8 @@ export default class ItemController {
         res.status(500).json(error);
       });
   }
+
+  // Update Item
 
   static async removeItem(req: Request, res: Response) {
     await ItemModel.findOneAndDelete({ id: req.params.id })

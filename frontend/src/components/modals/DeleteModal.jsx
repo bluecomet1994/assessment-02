@@ -8,6 +8,9 @@ const DeleteModal = (props) => {
   const { open, handler, id } = props;
   const dispatch = useDispatch();
 
+
+  // delete item
+
   const handleDelete = () => {
     dispatch(deleteItem(id))
       .then(() => handler(false));

@@ -8,15 +8,19 @@ function Item(props) {
   const { name, description, purchased } = data;
   const dispatch = useDispatch();
 
+  
+  // open edit modal when click edit icon button
   const openEditModal = () => {
     dispatch(selectItem(data));
     openEdit(true);
   }
 
+  // toggle checkpoint when click checkbox
   const togglePurchase = () => {
     dispatch(purchaseItem(data._id));
   }
-
+  
+  // open delete modal when click edit icon button
   const confirmDelete = () => {
     setDeleteId(data._id);
     openDelete(true);

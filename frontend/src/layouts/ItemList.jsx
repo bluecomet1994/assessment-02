@@ -23,6 +23,10 @@ function ItemList() {
     dispatch(getItems());
   }, [dispatch]);
 
+
+  // it shows loading animation while loading the data from the backend
+  // when the data is empty, is shows Empty component
+
   return isLoading ? (
     <CircularProgress size={96} sx={{ margin: "128px 0" }} />
   ) : (
